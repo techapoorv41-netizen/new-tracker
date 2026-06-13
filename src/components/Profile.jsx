@@ -7,11 +7,11 @@ return(
     />
 <div>
 <h2 className="text-2xl font-bold">{data.name}</h2>
-<p className="text-gray-500">{data.bio}</p>
-<p className="text-gray-400">{data.location}</p>
+<p className="text-black-500">{data.bio}</p>
+<p className="text-black-500">{data.location}</p>
 <div className="flex gap-4 mt-2" >
-<span className="text-sm" >{data.followers}followers</span>
-<span className="text-sm">{data.public_repos}repos</span>
+<span className="text-black-500-sm" >{data.followers} followers</span>
+<span className="text-black-sm">{data.public_repos} repos</span>
 </div>
 </div>
 </div>
