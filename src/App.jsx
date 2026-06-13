@@ -3,6 +3,7 @@ import { useState} from "react";
 import Profile from "./components/Profile";
 import useGithub from "./hooks/Github";
 import Repolist from "./components/Repolist";
+import LanguageChart from "./components/languageChart";
 function App(){
   const[username, setUsername] = useState('kunal-kushwaha')
   const{data,loading, error,repos} = useGithub(username)
@@ -15,6 +16,7 @@ return(
 {error && <p>{erorr}    </p>}
 {data && <Profile data ={data}/>}
 {data && <Repolist repos={repos}/>}
+{data &&<LanguageChart repos={repos}/>}
 
   </div>
 </div>
