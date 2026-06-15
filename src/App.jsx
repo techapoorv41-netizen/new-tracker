@@ -8,10 +8,17 @@ function App(){
   const[username, setUsername] = useState('kunal-kushwaha')
   const{data,loading, error,repos} = useGithub(username)
 
+
 return(
-<div className="bg-gray-100 min-h-screen">
-<Navbar/ >
+<div className="bg-gray-950 min-h-screen">
+ <Navbar/>
   <div className="max-w-4xl mx-auto p-6">
+    <input
+  type="text"
+  placeholder="Enter GitHub username..."
+  onKeyDown={(e) => e.key === 'Enter' && setUsername(e.target.value)}
+  className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 mb-4 outline-none"
+/>
 {loading && <p>Loading</p>}
 {error && <p>{erorr}    </p>}
 {data && <Profile data ={data}/>}

@@ -18,8 +18,8 @@ function LanguageChart({ repos }) {
   }));
 
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">Languages Used</h2>
+    <div className="p-4 bg-gray-400 rounded-2xl border border-gray-600">
+      <h2 className="text-2xl font-bold text-white  mb-4">Languages Used</h2>
       <PieChart width={400} height={300}>
         <Pie
           data={Data}

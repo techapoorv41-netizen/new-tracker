@@ -9,26 +9,29 @@ function Repolist({ repos }) {
   );
 
   return (
-    <div className="p-4">
+    <div className="bg-transparent">
       <input
         type="text"
         placeholder="Search repos..."
+        outline
         value={search}
         onChange={(e) => newSearch(e.target.value)}
-        className="w-full border p-2 rounded-md mb-4"
+        className="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 mb-4 outline-none"
       />
 
       {filteredRepos.map(repo => (
-        <div key={repo.id} className="border p-3 rounded-md mb-2">
-          <h3>{repo.name}</h3>
+        <div key={repo.id} className="border border-gray-600 p-4 rounded-xl mb-3 bg-gray-600 p-4 rounded-xl mb-3 bg-gray-800 hover:border-blue-500 transistion duration-200">
+          <a href={repo.html_url}  rel="noreferrer" className="text-gray-400 hover:underline">
+  <h3 className="font-bold">{repo.name}</h3>
+</a>
           <div className="flex gap-4 mt-2">
-            <span className="flex items-center gap-1 text-sm text-gray-600">
+            <span className="flex items-center gap-1 text-sm text-gray-400">
               <Star size={14} /> {repo.stargazers_count}
             </span>
-            <span className="flex items-center gap-1 text-sm text-gray-600">
+            <span className="flex items-center gap-1 text-sm text-gray-400">
               <GitFork size={14} /> {repo.forks_count}
             </span>
-            <span className="flex items-center gap-1 text-sm text-gray-600">
+            <span className="flex items-center gap-1 text-sm text-gray-400">
               <Code2 size={14} /> {repo.language || "N/A"}
             </span>
           </div>
