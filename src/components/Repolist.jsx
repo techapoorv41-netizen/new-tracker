@@ -7,9 +7,10 @@ function Repolist({ repos }) {
   const filteredRepos = repos.filter(repo =>
     repo.name.toLowerCase().includes(search.toLowerCase())
   );
-
+  
   return (
     <div className="bg-transparent">
+      
       <input
         type="text"
         placeholder="Search repos..."

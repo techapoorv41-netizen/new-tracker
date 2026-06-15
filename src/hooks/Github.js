@@ -19,6 +19,7 @@ axios.get(`https://api.github.com/users/${username}/repos?per_page=100`)
 ])
 .then(([profileRes,reposRes]) =>{
  setData(profileRes.data)
+ console.log(profileRes.data)
  setRepos(reposRes.data)
  setLoading(false)   
 })
