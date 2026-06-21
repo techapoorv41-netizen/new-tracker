@@ -7,7 +7,7 @@ import LanguageChart from "./components/languageChart";
 import TotalStars from "./components/totalStar";
 import UseLeetcode from "./hooks/useLeetcode";
 import Stats from "./components/Stats";
-
+import ProblemChart from "./components/ProblemChart";
 function App() {
   const [username, setUsername] = useState('')
   const [lcUsername, setLcUsername] = useState('')
@@ -38,9 +38,10 @@ function App() {
         {data && <Repolist repos={repos} />}
         {data && <LanguageChart repos={repos} />}
         {data && <TotalStars repos={repos} />}
-         {lcData && <Stats data ={lcData} />}
+       {lcData && <Stats data ={lcData} />}
+      {lcData && <ProblemChart data={lcData} />}
       </div>
-    </div>
+      </div>
   )
 }
 
