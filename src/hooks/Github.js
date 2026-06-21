@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import axios from "axios";
+import { use } from "react";
 
 function UseGithub(username){
     const[data,setData] = useState(null)
@@ -37,3 +38,4 @@ axios.get(`https://api.github.com/users/${username}/repos?per_page=100`)
 return {data,loading,error,repos};
 }
 export default UseGithub;
+
